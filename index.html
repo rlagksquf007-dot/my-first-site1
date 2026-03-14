@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>내 첫 번째 사이트</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .card {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #1f2937;
+      border-radius: 20px;
+      padding: 40px 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: 36px;
+    }
+
+    p {
+      color: #d1d5db;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    #idea {
+      margin: 30px 0;
+      font-size: 24px;
+      font-weight: bold;
+      color: #fbbf24;
+      min-height: 36px;
+    }
+
+    button {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 14px 24px;
+      font-size: 18px;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🎉 내 첫 번째 웹사이트</h1>
+    <p>이 사이트는 내가 처음으로 만든 웹사이트입니다.</p>
+    <p>버튼을 누르면 랜덤 아이디어가 나옵니다.</p>
+
+    <div id="idea">여기에 아이디어가 표시됩니다</div>
+
+    <button onclick="newIdea()">아이디어 뽑기</button>
+
+    <div class="footer">
+      made by 나
+    </div>
+  </div>
+
+  <script>
+    const ideas = [
+      "비트코인 수익 계산기 만들기",
+      "배당 계산기 만들기",
+      "주식 포트폴리오 정리하기",
+      "오늘의 목표 적기",
+      "점심 메뉴 추천기 만들기",
+      "가계부 앱 만들어보기",
+      "영어 문장 저장 노트 만들기"
+    ];
+
+    function newIdea() {
+      const random = ideas[Math.floor(Math.random() * ideas.length)];
+      document.getElementById("idea").innerText = random;
+    }
+  </script>
+</body>
+</html>
